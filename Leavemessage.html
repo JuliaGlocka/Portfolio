@@ -2,49 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>It's a title... wave!</title>
+  <meta name="referrer" content="origin">
+  <title>Contact form</title>
 </head>
 <body>
 
     
+  <center>
     <div class="navbar">
         <a href="ProgrammerPortfolio.html">Home</a>
         <a href="JobExp.html">Job experience</a>
         <a href="projects.html">Projects</a>
-        <a href="Leavemessage.html">Message me</a>
+        <a href="Leavemessage.html">Leave message</a>
     </div>
+    </center>
 
-    <form action="https://formsubmit.co/your@email.com" method="POST">
-        <input type="text" name="name" required>
-        <input type="email" name="email" required>
-        <button type="submit">Send</button>
-   </form> 
 
     <div class="container">
-        <form action="https://formsubmit.co/glockajulia@gmail.com" method="POST">
-      
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name...">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+      <h1>Leave message</h1>
+      <form target="_blank" action="https://formsubmit.co/glockajuliar@email.com" method="POST">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="col">
+              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-lg btn-dark btn-block">Send</button>
+      </form>
+    </div>
 
-          <label for="lname">E-mail address</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your e-mail..." required>
-
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="australia">Poland</option>
-            <option value="canada">European Union</option>
-            <option value="usa">USA or elsewhere</option>
-          </select>
-      
-          <label for="message">Message</label>
-          <textarea id="Message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
-      </div> 
 </body>
 </html>
