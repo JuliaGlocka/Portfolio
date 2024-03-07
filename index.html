@@ -1,93 +1,66 @@
-Your `index.html` file looks good overall. You have a basic structure with HTML elements such as headings, paragraphs, links, and tables. The CSS styling for the body background image and the navigation bar is also in place.
+<!-- Checking local storage address -->
+<!-- Local storage address is GitHub, not Visual Studio Code folder projects -->
 
-However, there are a few improvements you could consider:
-
-1. **Improving Accessibility**: Ensure that your website is accessible to all users, including those with disabilities. This includes providing alternative text for images (`alt` attribute), ensuring proper contrast for text, and using semantic HTML elements.
-
-2. **Responsive Design**: Make sure your website looks good and functions well on various devices and screen sizes. Consider using CSS media queries to adjust your layout and styling based on the device's screen size.
-
-3. **Semantic HTML**: Use semantic HTML elements to enhance the structure and meaning of your content. For example, use `<header>`, `<nav>`, `<main>`, `<footer>`, etc., instead of generic `<div>` elements where appropriate.
-
-Here's your `index.html` file with some improvements:
-
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="Author" content="Julia">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="Author" content="Julia" />
     <title>MyPortfolio</title>
     <style>
         body {
-            background-image: url('pexels-adrien-olichon-3137064.jpg');
-            /* Add more styling as needed */
+          background-image: url('pexels-adrien-olichon-3137064.jpg');
         }
-        .navbar {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            margin: 0 10px;
-        }
-    </style>
+        </style> 
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <a href="ProgrammerPortfolio.html">Home</a>
-            <a href="JobExp.html">Job experience</a>
-            <a href="Projects.html">Projects</a>
-            <a href="Leavemessage.html">Leave message</a>
-        </div>
-    </header>
+      <center>
+    <div class="navbar">
+        <a href="ProgrammerPortfolio.html">Home</a>
+        <a href="JobExp.html">Job experience</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Leavemessage.html">Leave message</a>
+    </div>
+    </center>
     
-    <main>
-        <h1>JULIA GŁOCKA</h1>
-        <p><strong>Contact information:</strong></p>
-        <p><a href="mailto:glockajulia@gmail.com">glockajulia@gmail.com</a></p>
-        <a href="JuliaGlockaCV.pdf" download="JuliaGlockaCV.pdf">Download CV (PDF)</a>
-        <br><br><br>
+    
+ 
+    <h1 style="color: #033b66; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">JULIA GŁOCKA </h1>
+    <p><strong style="color: #000;">Contact information:</strong></p>
+    <p><a href="mailto: glockajulia@gmail.com">glockajulia@gmail.com</a></p>
+    <a href="Julia Glocka CV.pdf" download="Julia Glocka CV.pdf">
+        Download a CV in a pdf file.
+      </a> 
+    <br />
+    <br />
+    <br />
 
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="5">Programming skills</th>
-                </tr>
-            </thead>
+    <table class="editorDemoTable" style="vertical-align: top;">
+        <thead>
+            <tr>
+                <th scope="col">Programming skills</th>
+            </tr>
+        </thead>
+        <table style="width: 100%;">
             <tbody>
-                <tr>
-                    <td>Frontend:</td>
-                    <td>Repository:</td>
-                    <td>Backend & OOP:</td>
-                    <td>Databases:</td>
-                    <td>Game development:</td>
+                <tr align="center">
+                    <th>Frontend:</th>
+                    <th>Repository:</th>
+                    <th>Backend & OOP:</th>
+                    <th>Databases:</th>
+                    <th>Game development:</th>
                 </tr>
-                <tr>
+                <tr align="center">
                     <td>HTML / CSS / JS</td>
-                    <td>GitLab / GitHub</td>
+                    <td>GitLab / GitHub:</td>
                     <td>C#</td>
-                    <td>SQL / PostgreSQL</td>
+                    <td>SQL /PostgreSQL</td>
                     <td>Unity Engine</td>
                 </tr>
             </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="5">And more in the future!</td>
-                </tr>
-            </tfoot>
         </table>
-    </main>
-    
-    <footer>
-        <!-- Add footer content if needed -->
-    </footer>
+        <caption>And more in the future!</caption>
+    </table>
+
 </body>
 </html>
-```
-
-Feel free to adjust the styles and structure further based on your preferences and requirements.
