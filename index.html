@@ -1,3 +1,6 @@
+To apply the 'Roboto' font and white color to the whole page, including all elements, you need to modify the CSS accordingly. Here's the updated code:
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,30 +9,32 @@
     <title>MyPortfolio</title>
     <style>
         body {
-            background-image: url('pexels-adrien-olichon-3137064.jpg'); font-family: 'Roboto', sans-serif;
+            background-image: url('pexels-adrien-olichon-3137064.jpg');
+            font-family: 'Roboto', sans-serif;
+            color: #fff; /* Set text color to white */
             /* Additional CSS styles can be added here */
         }
-
+        .navbar a {
+            color: #fff; /* Set navbar link color to white */
+        }
     </style>
 </head>
 <body>
-      <center>
-    <div class="navbar">
-        <a href="ProgrammerPortfolio.html">Home</a>
-        <a href="JobExp.html">Job experience</a>
-        <a href="Projects.html">Projects</a>
-        <a href="Leavemessage.html">Leave message</a>
-    </div>
+    <center>
+        <div class="navbar">
+            <a href="ProgrammerPortfolio.html">Home</a>
+            <a href="JobExp.html">Job experience</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Leavemessage.html">Leave message</a>
+        </div>
     </center>
     
-    
- 
-    <h1 style="color: #033b66; font-family: 'Roboto', sans-serif;">JULIA GŁOCKA </h1>
-    <p><strong style="color: #fff;">Contact information:</strong></p>
+    <h1 style="color: #033b66;">JULIA GŁOCKA</h1>
+    <p><strong>Contact information:</strong></p>
     <p><a href="mailto: glockajulia@gmail.com">glockajulia@gmail.com</a></p>
     <a href="Julia Glocka CV.pdf" download="JULIA GLOCKA CV.pdf">
         Download a CV in a pdf file.
-      </a> 
+    </a> 
     <br />
     <br />
     <br />
@@ -40,26 +45,24 @@
                 <th scope="col">Programming skills</th>
             </tr>
         </thead>
-        <table style="width: 100%; color: #fff; font-family: 'Roboto', sans-serif;">
-            <tbody style="font-family: 'Roboto', sans-serif;">
-                <tr align="center">
-                    <th>Frontend:</th>
-                    <th>Repository:</th>
-                    <th>Backend & OOP:</th>
-                    <th>Databases:</th>
-                    <th>Game development:</th>
-                </tr>
-                <tr align="center">
-                    <td>HTML / CSS</td>
-                    <td>GitLab / GitHub:</td>
-                    <td>C#</td>
-                    <td>SQL /PostgreSQL</td>
-                    <td>Unity Engine</td>
-                </tr>
-            </tbody>
-        </table>
-        <caption>And more in the future!</caption>
+        <tbody>
+            <tr align="center">
+                <th>Frontend:</th>
+                <th>Repository:</th>
+                <th>Backend & OOP:</th>
+                <th>Databases:</th>
+                <th>Game development:</th>
+            </tr>
+            <tr align="center">
+                <td>HTML / CSS</td>
+                <td>GitLab / GitHub:</td>
+                <td>C#</td>
+                <td>SQL /PostgreSQL</td>
+                <td>Unity Engine</td>
+            </tr>
+        </tbody>
     </table>
+    <caption>And more in the future!</caption>
 
 </body>
 </html>
