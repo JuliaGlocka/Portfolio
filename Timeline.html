@@ -38,7 +38,7 @@
 
     const TimelineObserver = ({ initialColor, fillColor, handleObserve, hasReverse }) => (
       <div>
-        {handleObserve && handleObserve(setObserver => (
+        {handleObserve && handleObserve((target, callbackFn) => (
           <Timeline
             callback={onCallback}
             className="timeline"
