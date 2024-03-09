@@ -1,75 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+ 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React Component Example</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today's Date</title>
 </head>
+ 
 <body>
-
-  <!-- HTML element to render the React component into -->
-  <div id="timeline100500"></div>
-
-  <!-- Include React and ReactDOM libraries -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-
-  <!-- React component code -->
-  <script type="text/javascript">
-    const Timeline = ({ setObserver, callback }) => {
-      const timeline = React.useRef(null);
-
-      // Function to be called when the element crosses the middle of the screen
-      const someCallback = () => {
-        callback();
-      };
-
-      // Effect to set the observer when the component mounts
-      React.useEffect(() => {
-        if (timeline.current) {
-          setObserver(timeline.current, someCallback);
-        }
-      }, []);
-
-      // Render the component
-      return <div id="timeline100500" ref={timeline} className="timeline" />;
-    };
-
-    const TimelineObserver = ({ initialColor, fillColor, handleObserve, hasReverse }) => (
-      <div>
-        {handleObserve && handleObserve((target, callbackFn) => (
-          <Timeline
-            callback={onCallback}
-            className="timeline"
-            setObserver={setObserver}
-          />
-        ))}
-      </div>
-    );
-
-    // Function to be called when the element crosses the middle of the screen
-    const onCallback = () => {
-      // Do something when the element crosses the middle of the screen
-      console.log("Element crossed the middle of the screen");
-    };
-
-    // Set observer function
-    const setObserver = (target, callbackFn) => {
-      // Set up observer logic here
-      console.log("Setting observer...");
-    };
-
-    // Render the React component into the 'root' element
-    ReactDOM.render(
-      <TimelineObserver
-        initialColor="#e5e5e5"
-        fillColor="#53b374"
-        handleObserve={setObserver}
-      />,
-      document.getElementById('timeline100500')
-    );
+  
+  <script>
+      let d = new Date();
+      document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
   </script>
-
+ 
 </body>
+ 
 </html>
