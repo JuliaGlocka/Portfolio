@@ -1,104 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline Page</title>
-    <style>
-        body {
+<!DOCTYPE  html>
+<html>
+	<head>
+        <style>
+
+            body {
             background-image: url('pexels-adrien-olichon-3137064.jpg');
             font-family: 'Roboto', sans-serif;
             color: #000000; 
-        }
-        table {
-            border-collapse: collapse;
-        }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        #root {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <center>
+            /* Additional CSS styles can be added here */
+            }
+            table {
+                border-collapse: collapse;
+            }
+            
+        </style>
+	</head>
+	<body>
+        <center>
         <div class="navbar">
             <a href="ProgrammerPortfolio.html">Home</a>
             <a href="JobExp.html">Job experience</a>
             <a href="Projects.html">Projects</a>
             <a href="Leavemessage.html">Leave message</a>
         </div>
-    </center>
+        </center>
+
+        <table border="3" style = "width:300px; border-color: #ff5722; background-color: #ffce01;">
+            <tr style="color:#0132ff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                <th>Years</th><th>Name of the company</th><th>Function</th><th>Description</th>
+            </tr>
+            <tr>
+                <td>2022/12-2022/09</td><td>Veeva</td><td>Data Steward</td><td>Information veryfication&maintenance, which was of the value to the employer.</td>
+            
+            </tr>
+            <tr>
+                <td>2020/01-2017/12</td><td>Maja</td><td>Office assistant</td><td>Office responsibilities such as IT service desk duties, securing order within documenatation, communiation with the clients.</td>
+            </tr>
+            
+        </table>
     
-    <table border="3" style="width:300px; border-color: #ff5722; background-color: #ffce01; margin: auto;">
-        <tr style="color:#0132ff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            <th>Years</th><th>Name of the company</th><th>Function</th><th>Description</th>
-        </tr>
-        <tr>
-            <td>2022/12-2022/09</td><td>Veeva</td><td>Data Steward</td><td>Information veryfication & maintenance, which was of the value to the employer.</td>
-        </tr>
-        <tr>
-            <td>2020/01-2017/12</td><td>Maja</td><td>Office assistant</td><td>Office responsibilities such as IT service desk duties, securing order within documenatation, communiation with the clients.</td>
-        </tr>
-    </table>
-
-    <div id="root"></div>
-
-    <script>
-        // Begin timeline.js
-        import React, { useRef, useEffect } from 'react';
-
-        const Timeline = ({ setObserver, callback }) => {
-            const timeline = useRef(null);
-          
-            // It will be fired when the element crosses the middle of the screen. 
-            const someCallback = () => {
-              callback();
-            };
-          
-            useEffect(() => {
-              if (timeline.current) {
-                setObserver(timeline.current, someCallback);
-              }
-            }, []);
-          
-            return <div id="timeline100500" ref={timeline} className="timeline" />;
-        };
-
-        const TimelineObserver = ({ initialColor, fillColor, handleObserve }) => {
-            // Your implementation for TimelineObserver component
-            return null; // Placeholder return since implementation is not provided in the example
-        };
-
-        ReactDOM.render(
-            React.createElement(TimelineObserver, {
-                initialColor: "#e5e5e5",
-                fillColor: "#53b374",
-                handleObserve: (setObserver) => (
-                    React.createElement(Timeline, {
-                        callback: onCallback,
-                        className: "timeline",
-                        setObserver: setObserver
-                    })
-                )
-            }),
-            document.getElementById('root')
-        );
-        // End timeline.js
-    </script>
-</body>
+	</body>
 </html>
