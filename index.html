@@ -11,9 +11,15 @@
             color: #fff;
             margin: 0; /* Reset marginesu dla body */
             padding: 0; /* Reset paddingu dla body */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .navbar {
             text-align: center; /* Wyśrodkowanie linków w navbarze */
+            margin-bottom: 20px; /* Dodanie odstępu na dół */
         }
         .navbar a {
             color: #fff;
@@ -23,18 +29,24 @@
         h1 {
             text-align: center; /* Wyśrodkowanie nagłówka */
             color: #033b66;
+            margin-top: 20px; /* Dodanie marginesu na górę */
         }
-        h1 a {
-            text-align: center; /* Wyśrodkowanie nagłówka */
-            color: #033b66;
+        .contact-info {
+            text-align: center; /* Wyśrodkowanie informacji kontaktowych */
+            margin-bottom: 20px; /* Dodanie odstępu na dół */
+        }
+        .contact-info a {
+            color: #fff;
+            text-decoration: none; /* Usunięcie podkreślenia spod linków */
+            margin-bottom: 10px; /* Dodanie odstępu na dół dla linku */
+            display: block; /* Zastosowanie blokowego wyświetlania linku */
         }
         .image-container {
             text-align: center; /* Wyśrodkowanie obrazka */
-            margin-top: 20px; /* Dodanie marginesu na górę */
+            margin-bottom: 20px; /* Dodanie odstępu na dół */
         }
         .image-container img {
-            width: 5%;    
-            height: auto;
+            width: 300px; /* Zdefiniowanie szerokości obrazka */
             height: auto; /* Automatyczne dopasowanie wysokości */
         }
         .button {
@@ -51,6 +63,7 @@
             margin: 0 auto; /* Utrzymanie tabeli w środku strony */
             color: #fff;
             border-collapse: collapse; /* Scalanie granic komórek */
+            margin-bottom: 20px; /* Dodanie odstępu na dół */
         }
         .editorDemoTable th, .editorDemoTable td {
             border: 1px solid #fff; /* Dodanie białych granic do komórek */
@@ -63,48 +76,51 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="ProgrammerPortfolio.html">Home</a>
-        <a href="Projects.html">Projects</a>
-        <a href="Leavemessage.html">Leave message</a>
-        <a href="Timeline.html">Timeline</a>
-    </div>
-    <div class="contact-info">
-        <p><strong>Contact information:</strong></p>
-        <p><a href="mailto: glockajulia@gmail.com">glockajulia@gmail.com</a></p>
-        <a href="Julia Glocka CV.pdf" download="JULIA GLOCKA CV.pdf">
-            Download a CV in a pdf file.
-        </a>
-    </div>
-    <div class="image-container">
-        <img src="timline-section.png" alt="Image">
-        <button class="button">Click me</button>
-    </div>
-    <table class="editorDemoTable">
-        <thead>
-            <tr>
-                <th>Programming skills</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Frontend:</td>
-                <td>Repository:</td>
-                <td>Backend & OOP:</td>
-                <td>Databases:</td>
-                <td>Game development:</td>
-            </tr>
-            <tr>
-                <td>HTML / CSS / JS</td>
-                <td>GitLab / GitHub:</td>
-                <td>C# / Java</td>
-                <td>SQL / PostgreSQL</td>
-                <td>Unity</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="centered-caption">
-        And more in the future!
+    <div class="content">
+        <div class="navbar">
+            <a href="ProgrammerPortfolio.html">Home</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Leavemessage.html">Leave message</a>
+            <a href="Timeline.html">Timeline</a>
+        </div>
+        <h1>JULIA GŁOCKA</h1>
+        <div class="contact-info">
+            <p><strong>Contact information:</strong></p>
+            <p><a href="mailto: glockajulia@gmail.com">glockajulia@gmail.com</a></p>
+            <a href="Julia Glocka CV.pdf" download="JULIA GLOCKA CV.pdf">
+                Download a CV in a pdf file.
+            </a>
+        </div>
+        <div class="image-container">
+            <img src="timline-section.png" alt="Image">
+            <button class="button">Click me</button>
+        </div>
+        <table class="editorDemoTable">
+            <thead>
+                <tr>
+                    <th>Programming skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Frontend:</td>
+                    <td>Repository:</td>
+                    <td>Backend & OOP:</td>
+                    <td>Databases:</td>
+                    <td>Game development:</td>
+                </tr>
+                <tr>
+                    <td>HTML / CSS / JS</td>
+                    <td>GitLab / GitHub:</td>
+                    <td>C# / Java</td>
+                    <td>SQL / PostgreSQL</td>
+                    <td>Unity</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="centered-caption">
+            And more in the future!
+        </div>
     </div>
 </body>
 </html>
