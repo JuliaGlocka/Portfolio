@@ -44,7 +44,14 @@
             display: block; /* Zastosowanie blokowego wyświetlania linku */
 
         }
-
+        #canvas-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            border: 1px solid white; /* Dodajemy obramowanie dla płótna */
+        }
         .editorDemoTable {
             text-align: center;
             margin: 0 auto; /* Utrzymanie tabeli w środku strony */
@@ -86,23 +93,23 @@
                 Download a CV in a pdf file.
             </a>
         </div>
-        <canvas id="myCanvas" width="200" height="400"></canvas>
-
+        <div id="canvas-container">
+            <canvas id="myCanvas" width="200" height="400"></canvas>
+        </div>
+    
         <script>
             var canvas = document.getElementById('myCanvas');
             var ctx = canvas.getContext('2d');
-    
+        
             // Ustawienie koloru na biały
             ctx.strokeStyle = 'white';
             ctx.lineWidth = 3; // Grubość 3 piksele
             // Rozpoczęcie nowej ścieżki
             ctx.beginPath();
-    
-            // Rysowanie linii
-            ctx.moveTo(200, 0); // Przesunięcie do punktu (100, 0)
-            ctx.lineTo(200, 500); // Narysowanie linii do punktu (100, 400)
-    
+        
             // Narysowanie linii na płótnie
+            ctx.moveTo(canvas.width / 2, 0); // Przesunięcie do środka górnego brzegu płótna
+            ctx.lineTo(canvas.width / 2, canvas.height); // Narysowanie linii do środka dolnego brzegu płótna
             ctx.stroke();
         </script>
         <div class="centered-th">
