@@ -85,14 +85,16 @@
                 Download a CV in a pdf file.
             </a>
         </div>
-        <canvas width="200" height="200" id="can"></canvas>
+        <canvas id="can" width="200" height="100" style="border:1px solid #000;"></canvas>
+
         <script>
           var c = can.getContext("2d");
           
           c.beginPath();
-          c.moveTo(30, 20); 
-          c.lineTo(120, 40);
+          c.moveTo(30, 100); 
+          c.lineTo(300, 100);
           c.stroke();
+        
         
         </script>
         <div class="centered-th">
