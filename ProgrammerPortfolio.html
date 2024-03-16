@@ -1,3 +1,8 @@
+Oczywiście, dokonajmy tych zmian. Aby umieścić przycisk w środku obrazka i uczynić go okrągłym, możemy użyć odpowiedniego położenia absolutnego dla przycisku oraz zaokrąglenia kształtu przy pomocy border-radius.
+
+Poniżej znajduje się zmodyfikowany kod HTML i CSS:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +21,10 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            transform: scale(1.1); /* Scale everything up by 10% */
         }
         .navbar {
             text-align: center; /* Wyśrodkowanie linków w navbarze */
-            margin-bottom: 20px; /* Dodanie odstępu na dół */
+            margin-bottom: 20px; /* Dodanie marginesu na dole navbara */
         }
         .navbar a {
             color: #fff;
@@ -30,34 +34,35 @@
         h1 {
             text-align: center; /* Wyśrodkowanie nagłówka */
             color: #033b66;
-            margin-top: 20px; /* Dodanie marginesu na górę */
         }
-        .contact-info {
-            text-align: center; /* Wyśrodkowanie informacji kontaktowych */
-            margin-bottom: 20px; /* Dodanie odstępu na dół */
+        .content {
+            text-align: center; /* Wyśrodkowanie zawartości */
+            margin-bottom: 20px; /* Dodanie marginesu na dole zawartości */
         }
         .contact-info a {
             color: #fff;
             text-decoration: none; /* Usunięcie podkreślenia spod linków */
-            margin-bottom: 10px; /* Dodanie odstępu na dół dla linku */
-            display: block; /* Zastosowanie blokowego wyświetlania linku */
-
         }
         .image-container {
+            position: relative; /* Ustawienie pozycji względem rodzica */
             text-align: center; /* Wyśrodkowanie obrazka */
-            margin-bottom: 20px; /* Dodanie odstępu na dół */
+            margin-bottom: 20px; /* Dodanie marginesu na dole obrazka */
         }
         .image-container img {
-            width: 5%; /* Zdefiniowanie szerokości obrazka */
+            width: 300px; /* Zdefiniowanie szerokości obrazka */
             height: auto; /* Automatyczne dopasowanie wysokości */
+            border-radius: 50%; /* Zaokrąglenie obrazka */
         }
         .button {
-            display: block;
-            margin-top: 15px;
-            padding: 5px 10px;
+            position: absolute; /* Ustawienie pozycji absolutnej */
+            top: 50%; /* Przesunięcie na środek w pionie */
+            left: 50%; /* Przesunięcie na środek w poziomie */
+            transform: translate(-50%, -50%); /* Przesunięcie wstecz o połowę szerokości i wysokości */
+            padding: 10px 20px; /* Dodanie wewnętrznego odstępu */
             color: #fff;
+            background-color: #333; /* Kolor tła przycisku */
             border: none;
-            border-radius: 5px;
+            border-radius: 50%; /* Zaokrąglenie przycisku */
             cursor: pointer;
         }
         .editorDemoTable {
@@ -65,67 +70,31 @@
             margin: 0 auto; /* Utrzymanie tabeli w środku strony */
             color: #fff;
             border-collapse: collapse; /* Scalanie granic komórek */
-            margin-bottom: 20px; /* Dodanie odstępu na dół */
+            width: 80%; /* Ustawienie szerokości tabeli */
         }
         .editorDemoTable th, .editorDemoTable td {
             border: 1px solid #fff; /* Dodanie białych granic do komórek */
             padding: 10px; /* Dodanie wewnętrznego odstępu */
-        }
-        .editorDemoTable th {
-            vertical-align: middle; /* Wyśrodkowanie tekstu w pionie */
+            text-align: center; /* Wyśrodkowanie tekstu w poziomie */
         }
         .centered-caption {
             text-align: center;
             color: #0b9112;
         }
+        .table-header {
+            font-size: 20px; /* Rozmiar czcionki dla nagłówka tabeli */
+            margin-bottom: 10px; /* Dodanie marginesu na dole nagłówka */
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="ProgrammerPortfolio.html">Home</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Leavemessage.html">Leave message</a>
+        <a href="Timeline.html">Timeline</a>
+    </div>
     <div class="content">
-        <div class="navbar">
-            <a href="ProgrammerPortfolio.html">Home</a>
-            <a href="Projects.html">Projects</a>
-            <a href="Leavemessage.html">Leave message</a>
-            <a href="Timeline.html">Timeline</a>
-        </div>
         <h1>JULIA GŁOCKA</h1>
         <div class="contact-info">
             <p><strong>Contact information:</strong></p>
-            <p><a href="mailto: glockajulia@gmail.com">glockajulia@gmail.com</a></p>
-            <a href="Julia Glocka CV.pdf" download="JULIA GLOCKA CV.pdf">
-                Download a CV in a pdf file.
-            </a>
-        </div>
-        <div class="image-container">
-            <img src="timline-section.png" alt="Image">
-            <button class="button">Click me</button>
-        </div>
-        <table class="editorDemoTable">
-            <thead>
-                <tr>
-                    <th>Programming skills</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Frontend:</td>
-                    <td>Repository:</td>
-                    <td>Backend & OOP:</td>
-                    <td>Databases:</td>
-                    <td>Game development:</td>
-                </tr>
-                <tr>
-                    <td>HTML / CSS / JS</td>
-                    <td>GitLab / GitHub:</td>
-                    <td>C# / Java</td>
-                    <td>SQL / PostgreSQL</td>
-                    <td>Unity</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="centered-caption">
-            And more in the future!
-        </div>
-    </div>
-</body>
-</html>
