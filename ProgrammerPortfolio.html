@@ -94,46 +94,12 @@
         <div id="canvas-container">
             <canvas id="myCanvas" width="200" height="400"></canvas>
         </div>
+    </div> <!-- Zamknięcie .content -->
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
     
-        <script>
-            var canvas = document.getElementById('myCanvas');
-            var ctx = canvas.getContext('2d');
-        
-            // Ustawienie koloru na biały
-            ctx.strokeStyle = 'white';
-            ctx.lineWidth = 3; // Grubość 3 piksele
-            // Rozpoczęcie nowej ścieżki
-            ctx.beginPath();
-        
-            // Narysowanie linii na płótnie
-            ctx.moveTo(canvas.width / 2, 0); // Przesunięcie do środka górnego brzegu płótna
-            ctx.lineTo(canvas.width / 2, canvas.height); // Narysowanie linii do środka dolnego brzegu płótna
-            ctx.stroke();
-        </script>
-        <div class="centered-th">
-            Programming skills
-            <br>
-        <table class="editorDemoTable">
-            <tbody>
-                <tr>
-                    <td>Frontend:</td>
-                    <td>Repository:</td>
-                    <td>Backend & OOP:</td>
-                    <td>Databases:</td>
-                    <td>Game development:</td>
-                </tr>
-                <tr>
-                    <td>HTML / CSS / JS</td>
-                    <td>GitLab / GitHub:</td>
-                    <td>C# / Java</td>
-                    <td>SQL / PostgreSQL</td>
-                    <td>Unity</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="centered-caption">
-            And more in the future!
-        </div>
-    </div>
-</body>
-</html>
+        // Ustawienie koloru na biały
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 3; // Grubość 3 piksele
+        // Rozpoczęcie n
