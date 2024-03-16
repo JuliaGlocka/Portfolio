@@ -43,23 +43,7 @@
             display: block; /* Zastosowanie blokowego wyświetlania linku */
 
         }
-        .image-container {
-            text-align: center; /* Wyśrodkowanie obrazka */
-            margin-bottom: 20px; /* Dodanie odstępu na dół */
-        }
-        .image-container img {
-            width: 5%; /* Zdefiniowanie szerokości obrazka */
-            height: auto; /* Automatyczne dopasowanie wysokości */
-        }
-        .button {
-            display: block;
-            margin-top: 15px;
-            padding: 5px 10px;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+
         .editorDemoTable {
             text-align: center;
             margin: 0 auto; /* Utrzymanie tabeli w środku strony */
@@ -101,10 +85,16 @@
                 Download a CV in a pdf file.
             </a>
         </div>
-        <div class="image-container">
-            <img src="timline-section.png" alt="Image">
-            <button class="button">Click me</button>
-        </div>
+        <canvas width="200" height="200" id="can"></canvas>
+        <script>
+          var c = can.getContext("2d");
+          
+          c.beginPath();
+          c.moveTo(30, 20); 
+          c.lineTo(120, 40);
+          c.stroke();
+        
+        </script>
         <div class="centered-th">
             Programming skills
             <br>
