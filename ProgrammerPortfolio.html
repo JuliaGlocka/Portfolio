@@ -67,13 +67,16 @@
             border-collapse: collapse; /* Scalanie granic komórek */
             margin-bottom: 20px; /* Dodanie odstępu na dół */
         }
-        .editorDemoTable th, .editorDemoTable td {
+        .centered-th {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px; /* Dodanie odstępu na dół */
+            font-size: 16;
+        }
+        .editorDemoTable td {
             border: 1px solid #fff; /* Dodanie białych granic do komórek */
             padding: 10px; /* Dodanie wewnętrznego odstępu */
             text-align: center; /* Wyśrodkowanie tekstu w poziomie */
-        }
-        .editorDemoTable th {
-            vertical-align: middle; /* Wyśrodkowanie tekstu w pionie */
         }
         .centered-caption {
             text-align: center;
@@ -101,7 +104,7 @@
             <img src="timline-section.png" alt="Image">
             <button class="button">Click me</button>
         </div>
-        <div class="centered-caption">
+        <div class="centered-th">
             Programming skills
         <table class="editorDemoTable">
             <tbody>
