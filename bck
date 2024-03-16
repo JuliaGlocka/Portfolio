@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide scrollbars */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Push the video behind other content */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="pexels-rostislav-uzunov-5453622 (2160p).mp4" type="video/mp4"> <!-- Replace 'your-animation.mp4' with the path to your video file -->
+        Your browser does not support the video tag.
+    </video>
+    <!-- Content goes here -->
+</body>
+</html>
