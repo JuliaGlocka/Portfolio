@@ -3,25 +3,94 @@
 <head>
   <title>Date now</title>
   <style>
-
     body {
-    background-image: url('pexels-adrien-olichon-3137064.jpg');
-    font-family: 'Roboto', sans-serif;
-    color: #000000; 
+      background-image: url('pexels-adrien-olichon-3137064.jpg');
+      font-family: 'Roboto', sans-serif;
+      color: #000000; 
     }
-  
   </style>
-  
 </head>
 
 <body>
   <center>
     <div class="navbar">
-        <a href="ProgrammerPortfolio.html">Home</a>
-        <a href="Projects.html">Projects</a>
-        <a href="Leavemessage.html">Leave message</a>
+      <a href="ProgrammerPortfolio.html">Home</a>
+      <a href="Projects.html">Projects</a>
+      <a href="Leavemessage.html">Leave message</a>
     </div>
-    </center>
+  </center>
+
+  <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+
+    var startPosX1, startPosY1, midPosX1, midPosY1;
+
+    canvas.onmousedown = function (ev) {
+      startPosX1 = ev.offsetX;
+      startPosY1 = ev.offsetY;
+      midPosX1 = startPosX1;
+      midPosY1 = startPosY1;
+    };
+
+    canvas.onmousemove = function (ev) {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.strokeStyle = "black";
+      var curPosX = ev.offsetX;
+      var curPosY = ev.offsetY;
+
+      if (curPosX > startPosX1) {
+        midPosX1 = ((curPosX - startPosX1) / 2) + startPosX1;
+      } else if (startPosX1 > curPosX) {
+        midPosX1 = ((startPosX1 - curPosX) / 2) + curPosX;
+      }
+
+      if (curPosY > startPosY1) {
+        midPosY1 = ((curPosY - startPosY1) / 2) + startPosY1;
+      } else if (startPosY1 > curPosY) {
+        midPosY1 = ((startPosY1 - curPosY) / 2) + curPosY;
+      }
+
+      context.beginPath();
+      context.moveTo(startPosX1, startPosY1);
+      context.lineTo(midPosX1, startPosY1);
+      context.stroke();
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(midPosX1, startPosY1);
+      context.lineTo(midPosX1, curPosY);
+      context.stroke();
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(midPosX1, curPosY);
+      context.lineTo(curPosX, curPosY);
+      context.stroke();
+      context.closePath();
+
+      drawArrowhead1(midPosX1, curPosY, curPosX, curPosY);
+    };
+
+    function drawArrowhead1(x1, y1, x2, y2) {
+      var dx = x2 - x1;
+      var dy = y2 - y1;
+      var radians = Math.atan2(dy, dx);
+      context.save();
+      context.lineWidth = 2;
+      context.translate(x2, y2);
+      context.rotate(radians);
+      context.moveTo(0, 0);
+      context.lineTo(-10, 6);
+      context.lineTo(-10, -6);
+      context.closePath();
+      context.fillStyle = "black";
+      context.fill();
+      context.restore();
+    }
+  </script>
 
 </body>
 </html>
