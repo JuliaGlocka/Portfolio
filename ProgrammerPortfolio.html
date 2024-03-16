@@ -1,132 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-    <title>MyPortfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
     <style>
         body {
             background-image: url('pexels-adrien-olichon-3137064.jpg');
             font-family: 'Roboto', sans-serif;
-            color: #fff; 
-       
+            color: #fff;
+            margin: 0; /* Reset marginesu dla body */
+            padding: 0; /* Reset paddingu dla body */
+        }
+        .navbar {
+            text-align: center; /* Wyśrodkowanie linków w navbarze */
         }
         .navbar a {
             color: #fff;
-            text-align: center;
+            text-decoration: none; /* Usunięcie podkreślenia spod linków */
+            margin: 0 15px; /* Dodanie marginesu między linkami */
         }
-        .editorDemoTable {
-        color: #fff;
-        text-align: center;
-        vertical-align: bottom;
-        }
-
-        .centered-caption {
-            text-align: center;
-            color: #0b9112; 
-        }
-
-        .editorDemoTable th {
-        color: #fff;
-        /*text-align: center;
-        vertical-align: bottom;*/
+        h1 {
+            text-align: center; /* Wyśrodkowanie nagłówka */
+            color: #033b66;
         }
         .image-container {
-            position: relative;
-            width: 300px;
-            height: auto;
-            overflow: hidden;
-            top: 20px; /* Przesunięcie o 20 pikseli w dół */
-            left: 510px; /* Przesunięcie o 50 pikseli w prawo */
+            text-align: center; /* Wyśrodkowanie obrazka */
+            margin-top: 20px; /* Dodanie marginesu na górę */
         }
         .image-container img {
-        width: 10%;    
-        height: auto;
-        display: block;
+            width: 300px; /* Zdefiniowanie szerokości obrazka */
+            height: auto; /* Automatyczne dopasowanie wysokości */
         }
         .button {
-        display: block;
-        margin-top: 15px;
-        padding: 5px 10px;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-
+            display: block;
+            margin-top: 15px;
+            padding: 5px 10px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-
-        
-
+        .editorDemoTable {
+            text-align: center;
+            margin: 0 auto; /* Utrzymanie tabeli w środku strony */
+            color: #fff;
+            border-collapse: collapse; /* Scalanie granic komórek */
+        }
+        .editorDemoTable th, .editorDemoTable td {
+            border: 1px solid #fff; /* Dodanie białych granic do komórek */
+            padding: 10px; /* Dodanie wewnętrznego odstępu */
+        }
+        .centered-caption {
+            text-align: center;
+            color: #0b9112;
+        }
     </style>
-
 </head>
-
-
 <body>
-        <center>
-        <div class="navbar">
-            <a href="ProgrammerPortfolio.html">Home</a>
-            <a href="Projects.html">Projects</a>
-            <a href="Leavemessage.html">Leave message</a>
-            <a href="Timeline.html">Timeline</a>
-        </div>
-        <h1 style="color: #033b66;">JULIA GŁOCKA</h1>
-        <p><strong>Contact information:</strong></p>
-        <p><a href="mailto: glockajulia@gmail.com">glockajulia@gmail.com</a></p>
-        <a href="Julia Glocka CV.pdf" download="JULIA GLOCKA CV.pdf">
+    <div class="navbar">
+        <a href="ProgrammerPortfolio.html">Home</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Leavemessage.html">Leave message</a>
+        <a href="Timeline.html">Timeline</a>
+    </div>
+    <h1>JULIA GŁOCKA</h1>
+    <p><strong>Contact information:</strong></p>
+    <p><a href="mailto: glockajulia@gmail.com">glockajulia@gmail.com</a></p>
+    <a href="Julia Glocka CV.pdf" download="JULIA GLOCKA CV.pdf">
         Download a CV in a pdf file.
-        </a> 
-        </center>
-
-        <br />
-        <br />
-        <br />
-        <center>
-        <div class="image-container">
-            <img src="timline-section.png" alt="Image">
-            <button class="button">Click me1</button>
-          </div>
-        </center>
-        
-         
-        <script></script>
-
-        <center>
-        <table class="editorDemoTable">
-            <thead>
-                <tr>
-                    <center>
-                    <th scope="col;">Programming skills</th> 
-                </center>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Frontend:</th>
-                    <th>Repository:</th>
-                    <th>Backend & OOP:</th>
-                    <th>Databases:</th>
-                    <th>Game development:</th>
-                </tr>
-                <tr>
-                    <td>HTML / CSS / JS</td>
-                    <td>GitLab / GitHub:</td>
-                    <td>C# / Java</td>
-                    <td>SQL / PostgreSQL</td>
-                    <td>Unity</td>
-                </tr>
-            </tbody>
-        </table>
-    </center>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="centered-caption">
+    </a>
+    <div class="image-container">
+        <img src="timline-section.png" alt="Image">
+        <button class="button">Click me</button>
+    </div>
+    <table class="editorDemoTable">
+        <thead>
+            <tr>
+                <th>Programming skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Frontend:</td>
+                <td>Repository:</td>
+                <td>Backend & OOP:</td>
+                <td>Databases:</td>
+                <td>Game development:</td>
+            </tr>
+            <tr>
+                <td>HTML / CSS / JS</td>
+                <td>GitLab / GitHub:</td>
+                <td>C# / Java</td>
+                <td>SQL / PostgreSQL</td>
+                <td>Unity</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="centered-caption">
         And more in the future!
-        </div>
-
+    </div>
 </body>
 </html>
