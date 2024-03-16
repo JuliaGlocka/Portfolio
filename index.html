@@ -85,17 +85,24 @@
                 Download a CV in a pdf file.
             </a>
         </div>
-        <canvas id="can" width="200" height="100" style="border:1px solid #000;"></canvas>
+        <canvas id="myCanvas" width="200" height="400" style="border:1px solid rgb(255, 255, 255);"></canvas>
 
         <script>
-          var c = can.getContext("2d");
-          
-          c.beginPath();
-          c.moveTo(30, 100); 
-          c.lineTo(300, 100);
-          c.stroke();
-        
-        
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+    
+            // Ustawienie koloru na biały
+            ctx.strokeStyle = 'white';
+    
+            // Rozpoczęcie nowej ścieżki
+            ctx.beginPath();
+    
+            // Rysowanie linii
+            ctx.moveTo(100, 0); // Przesunięcie do punktu (100, 0)
+            ctx.lineTo(100, 400); // Narysowanie linii do punktu (100, 400)
+    
+            // Narysowanie linii na płótnie
+            ctx.stroke();
         </script>
         <div class="centered-th">
             Programming skills
